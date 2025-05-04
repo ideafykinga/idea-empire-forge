@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { ArrowRight, Rocket } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,9 +34,15 @@ const HeroSection = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <Button size="lg" className="bg-gradient-to-r from-ideify-purple to-ideify-blue hover:opacity-90 text-white">
-              Start For Free
-              <ArrowRight className="ml-2 h-4 w-4" />
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-ideify-purple to-ideify-blue hover:opacity-90 text-white"
+              asChild
+            >
+              <Link to="/signin">
+                Start For Free
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
             <Button variant="outline" size="lg" className="glass border-purple-200 hover:bg-white/50">
               See How It Works

@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -53,11 +54,11 @@ const Navbar = () => {
         
         {/* Call to Action buttons */}
         <div className="hidden md:flex items-center space-x-4">
-          <Button variant="link" className="text-ideify-purple">
-            Log In
+          <Button variant="link" className="text-ideify-purple" asChild>
+            <Link to="/signin">Log In</Link>
           </Button>
-          <Button className="bg-ideify-purple text-white hover:bg-ideify-deep-purple">
-            Sign Up Free
+          <Button className="bg-ideify-purple text-white hover:bg-ideify-deep-purple" asChild>
+            <Link to="/signin">Sign Up Free</Link>
           </Button>
         </div>
         
@@ -90,11 +91,11 @@ const Navbar = () => {
               ))}
             </nav>
             <div className="flex flex-col space-y-4">
-              <Button variant="link" className="text-ideify-purple">
-                Log In
+              <Button variant="link" className="text-ideify-purple" asChild>
+                <Link to="/signin" onClick={() => setIsMobileMenuOpen(false)}>Log In</Link>
               </Button>
-              <Button className="bg-ideify-purple text-white hover:bg-ideify-deep-purple">
-                Sign Up Free
+              <Button className="bg-ideify-purple text-white hover:bg-ideify-deep-purple" asChild>
+                <Link to="/signin" onClick={() => setIsMobileMenuOpen(false)}>Sign Up Free</Link>
               </Button>
             </div>
           </div>
