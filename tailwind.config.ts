@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				ideify: {
+					purple: '#7E69AB',
+					'deep-purple': '#4A3A70', 
+					'light-purple': '#D6BCFA',
+					blue: '#4A6FA5',
+					'dark-blue': '#1A1F2C',
 				}
 			},
 			borderRadius: {
@@ -84,12 +92,43 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				float: {
+					'0%, 100%': {
+						transform: 'translateY(0)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
+				},
+				pulse: {
+					'0%, 100%': {
+						opacity: '1'
+					},
+					'50%': {
+						opacity: '0.5'
+					}
+				},
+				shimmer: {
+					'0%': {
+						backgroundPosition: '-40rem 0'
+					},
+					'100%': {
+						backgroundPosition: '40rem 0'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'pulse': 'pulse 3s ease-in-out infinite',
+				'shimmer': 'shimmer 2s linear infinite'
+			},
+			backgroundImage: {
+				'gradient-hero': 'linear-gradient(90deg, hsla(277, 75%, 84%, 1) 0%, hsla(297, 50%, 51%, 1) 100%)',
+				'gradient-card': 'linear-gradient(90deg, hsla(277, 75%, 84%, 0.3) 0%, hsla(297, 50%, 51%, 0.3) 100%)',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
