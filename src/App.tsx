@@ -12,6 +12,11 @@ import IdeaValidation from "./pages/IdeaValidation";
 import IdeaFeedback from "./pages/IdeaFeedback";
 import StartupDetails from "./pages/StartupDetails";
 import WorkflowVisualization from "./pages/WorkflowVisualization";
+import DashboardLayout from "./components/layouts/DashboardLayout";
+import Dashboard from "./pages/Dashboard";
+import CoFounder from "./pages/CoFounder";
+import Community from "./pages/Community";
+import Funds from "./pages/Funds";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +34,13 @@ const App = () => (
           <Route path="/idea-feedback" element={<IdeaFeedback />} />
           <Route path="/startup-details" element={<StartupDetails />} />
           <Route path="/workflow-visualization" element={<WorkflowVisualization />} />
+          
+          {/* Dashboard Routes */}
+          <Route path="/dashboard" element={<DashboardLayout><Dashboard /></DashboardLayout>} />
+          <Route path="/co-founder" element={<DashboardLayout><CoFounder /></DashboardLayout>} />
+          <Route path="/community" element={<DashboardLayout><Community /></DashboardLayout>} />
+          <Route path="/funds" element={<DashboardLayout><Funds /></DashboardLayout>} />
+          
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

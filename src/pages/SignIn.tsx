@@ -16,7 +16,8 @@ const SignIn = () => {
     setTimeout(() => {
       setIsLoading(false);
       toast.success("Successfully signed in!");
-      navigate("/onboarding");
+      // Redirect to dashboard instead of onboarding
+      navigate("/dashboard");
     }, 1500);
   };
 
