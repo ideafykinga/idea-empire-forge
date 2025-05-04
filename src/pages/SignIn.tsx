@@ -16,8 +16,8 @@ const SignIn = () => {
     setTimeout(() => {
       setIsLoading(false);
       toast.success("Successfully signed in!");
-      // Redirect to dashboard instead of onboarding
-      navigate("/dashboard");
+      // Redirect directly to idea validation instead of onboarding
+      navigate("/idea-validation");
     }, 1500);
   };
 
@@ -36,7 +36,7 @@ const SignIn = () => {
               <h1 className="text-3xl font-bold mb-2">
                 <span className="gradient-text">Welcome to Ideify</span>
               </h1>
-              <p className="text-gray-700">Sign in to continue your startup journey</p>
+              <p className="text-gray-700">Sign in to begin your startup journey</p>
             </div>
 
             <Button 

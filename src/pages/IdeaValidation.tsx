@@ -53,7 +53,7 @@ const IdeaValidation = () => {
                 <span className="gradient-text">Describe Your Startup Idea</span>
               </h1>
               <p className="text-gray-700 max-w-lg mx-auto">
-                We'll analyze your idea using AI and provide feedback to help you refine it.
+                Every successful startup begins with validation. We'll analyze your idea using AI to help refine it before proceeding.
               </p>
             </div>
 
